@@ -32,12 +32,14 @@ do {
             break;
         }
         5 {
-            
 
+            $userTime = $((Get-Counter -Counter "\prosessor(_total)\% Brukermodustid" -SampleInterval 1 -MaxSamples 1).CounterSamples.CookedValue)
+            $kernelTime = $((Get-Counter -Counter "\prosessor(_total)\% Systemmodustid" -SampleInterval 1 -MaxSamples 1).CounterSamples.CookedValue)
+            "Kernelmode: $kernelTime Usermode: $userTime"
             break;
         }
         6 {
-
+            
             break;
         }
         Default {
