@@ -39,7 +39,7 @@ do {
             break;
         }
         6 {
-            
+            "Interrupts siste sekund: $((Get-Counter -Counter "\prosessor(_total)\Avbrudd/sek").CounterSamples.CookedValue)"
             break;
         }
         Default {
